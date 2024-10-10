@@ -1,11 +1,6 @@
-import Footer from '../components/Footer'
-import Navbar from '../components/Navbar'
-
 const ProductDetails = () => {
   return (
     <>
-      {/* Navbar */}
-      <Navbar />
       {/* Hero Section */}
       <div className="bg-[#F4F4F4]">
         <div className="mx-auto max-w-3xl px-3 py-5 text-center md:py-10">
@@ -48,8 +43,6 @@ const ProductDetails = () => {
           </div>
         </div>
       </div>
-      {/* Footer Section */}
-      <Footer />
     </>
   )
 }

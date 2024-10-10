@@ -1,6 +1,4 @@
 import { useEffect, useState } from 'react'
-import Footer from '../components/Footer'
-import Navbar from '../components/Navbar'
 
 const Home = () => {
   const [data, setData] = useState([])
@@ -15,10 +13,10 @@ const Home = () => {
     fetchData()
   }, [])
 
+  const handleProductDetails = () => {}
+
   return (
     <>
-      {/* Navbar */}
-      <Navbar />
       {/* Hero Section */}
       <div className="bg-[#F4F4F4]">
         <div className="mx-auto max-w-3xl px-3 py-5 text-center md:py-10">
@@ -37,7 +35,10 @@ const Home = () => {
           Featured Products
         </h1>
         {/* Product Grid */}
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div
+          onClick={handleProductDetails}
+          className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
+        >
           {data.map((product) => (
             <div
               key={product.id}
@@ -52,7 +53,7 @@ const Home = () => {
                 <h3 className="mb-2 text-lg font-semibold text-gray-800">
                   {product.title}
                 </h3>
-                <p className="mb-4 text-gray-600">{product.price}</p>
+                <p className="mb-4 text-gray-600">$ {product.price}</p>
                 <button className="w-full rounded bg-blue-500 px-4 py-2 text-white hover:bg-blue-600">
                   Buy Now
                 </button>
@@ -61,8 +62,6 @@ const Home = () => {
           ))}
         </div>
       </div>
-      {/* Footer Section */}
-      <Footer />
     </>
   )
 }

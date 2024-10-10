@@ -11,7 +11,7 @@ const Login = () => {
             alt="Your Company"
           />
           <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">
-            Login your account
+            Log into your account
           </h2>
         </div>
         <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
@@ -98,18 +98,18 @@ const Login = () => {
                 type="submit"
                 className="flex w-full justify-center rounded-md bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
               >
-                Sign up
+                Log In
               </button>
             </div>
           </form>
           {/* Additional Link */}
           <p className="mt-6 text-center text-sm text-gray-500">
-            Already have an account?
+            Don't have an account?
             <a
               href="#"
               className="font-medium text-indigo-600 hover:text-indigo-500"
             >
-              Sign in
+              Sign Up
             </a>
           </p>
         </div>
