@@ -1,5 +1,12 @@
 import { useEffect, useState } from 'react'
 
+interface Props {
+  id: string
+  image: string
+  title: string
+  price: number
+}
+
 const Home = () => {
   const [data, setData] = useState([])
 
