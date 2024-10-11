@@ -6,9 +6,7 @@ import {
   Route,
   RouterProvider,
 } from 'react-router-dom'
-
 import './index.css'
-import { createPortal } from 'react-dom'
 import Layout from './Layout.tsx'
 import Home from './pages/Home.tsx'
 import Login from './pages/Login.tsx'

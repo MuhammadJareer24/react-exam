@@ -1,21 +1,28 @@
 import { useEffect, useState } from 'react'
 
-interface Props {
-  id: string
-  image: string
+interface Product {
+  id: number
   title: string
   price: number
+  description: string
+  category: string
+  image: string
 }
 
 const Home = () => {
-  const [data, setData] = useState([])
+  const [data, setData] = useState<Product[]>([])
 
   useEffect(() => {
     const url = 'https://fakestoreapi.com/products'
+
     const fetchData = async () => {
-      const response = await fetch(url)
-      const data = await response.json()
-      setData(data)
+      try {
+        const response = await fetch(url)
+        const data = await response.json()
+        setData(data)
+      } catch (error) {
+        console.log('Error in fetch request:', error)
+      }
     }
     fetchData()
   }, [])
