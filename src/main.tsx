@@ -7,11 +7,12 @@ import {
   RouterProvider,
 } from 'react-router-dom'
 import './index.css'
-import Layout from './Layout.tsx'
+
 import Home from './pages/Home.tsx'
 import Login from './pages/Login.tsx'
 import Signup from './pages/Signup.tsx'
 import ProductDetails from './pages/ProductDetails.tsx'
+import Layout from './Layout.tsx'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
