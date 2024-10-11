@@ -7,7 +7,6 @@ import {
   RouterProvider,
 } from 'react-router-dom'
 import './index.css'
-
 import Home from './pages/Home.tsx'
 import Login from './pages/Login.tsx'
 import Signup from './pages/Signup.tsx'
