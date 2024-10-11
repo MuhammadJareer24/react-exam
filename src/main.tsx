@@ -11,11 +11,11 @@ import Home from './pages/Home.tsx'
 import Login from './pages/Login.tsx'
 import Signup from './pages/Signup.tsx'
 import ProductDetails from './pages/ProductDetails.tsx'
-import Layout from './Layout.tsx'
+import AppLayout from './AppLayout.tsx'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<Layout />}>
+    <Route path="/" element={<AppLayout />}>
       <Route path="" element={<Home />} />
       <Route path="signup" element={<Signup />} />
       <Route path="login" element={<Login />} />

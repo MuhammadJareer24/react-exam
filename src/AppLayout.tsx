@@ -2,7 +2,7 @@ import { Outlet } from 'react-router-dom'
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
 
-const Layout = () => {
+const AppLayout = () => {
   return (
     <>
       <Navbar />
@@ -11,4 +11,4 @@ const Layout = () => {
     </>
   )
 }
-export default Layout
+export default AppLayout
