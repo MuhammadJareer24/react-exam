@@ -56,7 +56,7 @@ const Home = () => {
           {data.map((product) => (
             <div
               key={product.id}
-              className="boder-green-200 overflow-hidden rounded-lg border bg-white"
+              className="border-green-200 overflow-hidden rounded-lg border bg-white"
             >
               <img
                 className="h-48 w-full object-cover"
