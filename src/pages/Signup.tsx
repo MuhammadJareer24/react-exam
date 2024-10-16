@@ -1,3 +1,7 @@
+import { Link } from 'react-router-dom'
+import AdditionalContent from '../components/AdditionalContent'
+import Input from '../components/Input'
+
 const Signup = () => {
   return (
     <div className="flex min-h-screen">
@@ -17,81 +21,7 @@ const Signup = () => {
         <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
           <form className="space-y-6" action="#" method="POST">
             {/* Name Field */}
-            <div>
-              <label
-                htmlFor="name"
-                className="block text-sm font-medium text-gray-700"
-              >
-                Your Name
-              </label>
-              <div className="mt-1">
-                <input
-                  id="name"
-                  name="name"
-                  type="text"
-                  autoComplete="name"
-                  required
-                  className="block w-full rounded-md border border-gray-300 px-3 py-2 text-gray-900 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                />
-              </div>
-            </div>
-            {/* Email Field */}
-            <div>
-              <label
-                htmlFor="email"
-                className="block text-sm font-medium text-gray-700"
-              >
-                Email address
-              </label>
-              <div className="mt-1">
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  autoComplete="email"
-                  required
-                  className="block w-full rounded-md border border-gray-300 px-3 py-2 text-gray-900 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                />
-              </div>
-            </div>
-            {/* Password Field */}
-            <div>
-              <label
-                htmlFor="password"
-                className="block text-sm font-medium text-gray-700"
-              >
-                Password
-              </label>
-              <div className="mt-1">
-                <input
-                  id="password"
-                  name="password"
-                  type="password"
-                  autoComplete="current-password"
-                  required
-                  className="block w-full rounded-md border border-gray-300 px-3 py-2 text-gray-900 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                />
-              </div>
-            </div>
-            {/* Confirm Password Field */}
-            <div>
-              <label
-                htmlFor="confirm-password"
-                className="block text-sm font-medium text-gray-700"
-              >
-                Confirm Password
-              </label>
-              <div className="mt-1">
-                <input
-                  id="confirm-password"
-                  name="confirm-password"
-                  type="password"
-                  autoComplete="new-password"
-                  required
-                  className="block w-full rounded-md border border-gray-300 px-3 py-2 text-gray-900 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                />
-              </div>
-            </div>
+            <Input />
             {/* Submit Button */}
             <div>
               <button
@@ -105,32 +35,17 @@ const Signup = () => {
           {/* Additional Link */}
           <p className="mt-6 text-center text-sm text-gray-500">
             Already have an account?
-            <a
-              href="#"
+            <Link
+              to="/login"
               className="font-medium text-indigo-600 hover:text-indigo-500"
             >
               Sign in
-            </a>
+            </Link>
           </p>
         </div>
       </div>
       {/* Right side: Additional content (e.g., features or images) */}
-      <div className="hidden items-center justify-center bg-indigo-100 lg:flex lg:w-1/2">
-        <div className="p-8 text-center">
-          <h3 className="mb-6 text-2xl font-bold text-gray-900">
-            Why Join Us?
-          </h3>
-          <p className="mb-4 text-lg text-gray-700">
-            Experience the best ecommerce app for all your needs.
-          </p>
-          <p className="mb-4 text-lg text-gray-700">
-            Get exclusive discounts and offers on your favorite products.
-          </p>
-          <p className="mb-4 text-lg text-gray-700">
-            Fast and secure checkout process tailored for you.
-          </p>
-        </div>
-      </div>
+      <AdditionalContent />
     </div>
   )
 }

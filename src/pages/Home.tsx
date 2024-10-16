@@ -1,16 +1,8 @@
 import { useEffect, useState } from 'react'
-
-interface Product {
-  id: number
-  title: string
-  price: number
-  description: string
-  category: string
-  image: string
-}
+import ProductType from '../types'
 
 const Home = () => {
-  const [data, setData] = useState<Product[]>([])
+  const [data, setData] = useState<ProductType[]>([])
 
   useEffect(() => {
     const url = 'https://fakestoreapi.com/products'
@@ -32,17 +24,7 @@ const Home = () => {
   return (
     <>
       {/* Hero Section */}
-      <div className="bg-[#F4F4F4]">
-        <div className="mx-auto max-w-3xl px-3 py-5 text-center md:py-10">
-          <h1 className="text-3xl font-semibold leading-tight text-[#1E1E1E] md:text-[40px]">
-            All-in-One E-commerce App
-          </h1>
-          <h2 className="mt-5 text-lg font-medium text-[#1E1E1E]">
-            Discover premium products and enjoy shopping with us. Risk Free
-            Shopping!
-          </h2>
-        </div>
-      </div>
+
       {/* Products Section */}
       <div className="container mx-auto bg-white p-6">
         <h1 className="mb-6 text-3xl font-bold text-gray-800">
